@@ -10,6 +10,23 @@ app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// adding header for giving access to all the users from different port to access the API
+app.use((req, res, next) => {
+  req.header("Access-Control-Allow-Origin", "*"); // * means any you can specify to a single user like "https://liky.com"
+  req.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization" // or can give * for all
+  );
+  if (req.method === "OPTIONS") {
+    res.header(
+      "Access-Control-Allow-Methods",
+      "PUT, POST, PATCH, DELETE, GET "
+    );
+    return res.status(200).json({});
+  }
+  next();
+});
+
 // Routes which should handle request
 app.use("/products", productRoute);
 app.use("/orders", orderRoute);
