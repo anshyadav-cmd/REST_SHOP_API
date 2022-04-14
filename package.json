@@ -1,0 +1,24 @@
+{
+  "name": "rest-shop",
+  "version": "1.0.0",
+  "description": "Node.js RESTful API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anshyadav-cmd/REST_SHOP_API.git"
+  },
+  "keywords": [
+    "node",
+    "restful",
+    "api"
+  ],
+  "author": "Ansh Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anshyadav-cmd/REST_SHOP_API/issues"
+  },
+  "homepage": "https://github.com/anshyadav-cmd/REST_SHOP_API#readme"
+}
